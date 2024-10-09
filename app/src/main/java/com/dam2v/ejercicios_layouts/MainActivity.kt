@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -49,9 +50,10 @@ fun Box(modifier: Modifier = Modifier) {
                 color = MaterialTheme.colorScheme.tertiary
             ){
                 Column (
-                    modifier = modifier.weight(20f).padding(),
+                    modifier = modifier.weight(20f).padding().background(MaterialTheme.colorScheme.secondary),
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally){
+                    Text(text = "Hola")
 
                 }
             }
