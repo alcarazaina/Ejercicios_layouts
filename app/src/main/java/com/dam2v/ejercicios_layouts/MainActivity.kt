@@ -129,6 +129,33 @@ fun MiBox2(){
     }
 }
 
+@Composable
+fun MiBox3(){
+    Box(modifier = Modifier
+        .background(Color.Green)
+        .size(300.dp)){
+        Box(modifier = Modifier
+            .background(Color.Red)
+            .align(Alignment.TopEnd)
+            .size(240.dp)){
+            Box(modifier = Modifier
+                .background(Color.Blue)
+                .align(Alignment.BottomStart)
+                .size(180.dp)){
+                Box(modifier = Modifier
+                    .background(Color.Yellow)
+                    .align(Alignment.BottomEnd)
+                    .size(120.dp)){
+                    Box(modifier = Modifier
+                        .background(Color.Black)
+                        .align(Alignment.TopStart)
+                        .size(60.dp)){}
+                }
+            }
+        }
+    }
+}
+
 /*@Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
@@ -148,8 +175,16 @@ fun MiBoxPreview(){
 
  */
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun MiBox2Preview(){
     MiBox2()
+}
+ */
+
+@Preview(showBackground = true)
+@Composable
+fun MiBox3Preview(){
+    MiBox3()
 }
