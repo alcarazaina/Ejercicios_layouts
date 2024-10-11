@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -30,13 +32,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Ejercicios_layoutsTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     MiBox()
                 }
             }
         }
     }
-}
+
 
 /* @Composable
 fun BoxActivity(modifier: Modifier = Modifier) {
@@ -101,6 +102,32 @@ fun MiBox() {
     }
 }
 
+@Composable
+fun MiBox2(){
+    Box(modifier = Modifier
+        .background(Color.Green)
+        .size(300.dp)){
+        Box(modifier = Modifier
+            .background(Color.Red)
+            .align(Alignment.Center)
+            .size(240.dp)){
+            Box(modifier = Modifier
+                .background(Color.Blue)
+                .align(Alignment.Center)
+                .size(180.dp)){
+                Box(modifier = Modifier
+                    .background(Color.Yellow)
+                    .align(Alignment.Center)
+                    .size(120.dp)){
+                    Box(modifier = Modifier
+                        .background(Color.Black)
+                        .align(Alignment.Center)
+                        .size(60.dp)){}
+                }
+            }
+        }
+    }
+}
 
 /*@Preview(showBackground = true)
 @Composable
@@ -112,8 +139,17 @@ fun GreetingPreview() {
 
  */
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun MiBoxPreview(){
     MiBox()
+}
+
+ */
+
+@Preview(showBackground = true)
+@Composable
+fun MiBox2Preview(){
+    MiBox2()
 }
