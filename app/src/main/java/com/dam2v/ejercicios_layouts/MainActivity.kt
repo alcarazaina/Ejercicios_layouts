@@ -25,8 +25,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.dam2v.ejercicios_layouts.ui.theme.Ejercicios_layoutsTheme
 
 class MainActivity : ComponentActivity() {
@@ -160,24 +163,85 @@ fun MiBox3(){
 }
 
 @Composable
-fun MyColumn1(){
-    Box(modifier = Modifier.background(Color.White).fillMaxSize()){
-        Box(modifier = Modifier.background(Color.Gray).height(90.dp).fillMaxWidth()){
-            Row(modifier = Modifier.padding(30.dp)) {
-                Column(
-                    modifier = Modifier.padding(),
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally,
+fun MyColumn1() {
+    Column(modifier = Modifier.background(Color.White).fillMaxSize()) {
+        Box(modifier = Modifier.background(Color.Gray).height(90.dp).fillMaxWidth()) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.Center)
+            ) {
+                Row(modifier = Modifier) {
+                    Column(
+                        modifier = Modifier
+                    ) {
+                        Text(
+                            text = "Ejemplo1",
+                            color = Color.Black,
+                            fontSize = 12.sp
+                        )
+                    }
+                }
+            }
+        }
+        Box(modifier = Modifier.background(Color.White).height(400.dp).fillMaxWidth()) {
+            Box(
+                modifier = Modifier.background(Color.Black)
+                    .align(Alignment.Center)
+                    .height(90.dp)
+                    .width(180.dp)
+            ){
+                Box(modifier = Modifier.align(Alignment.CenterEnd)) {
+                        Text(
+                            text = "Ejemplo2",
+                            color = Color.White,
+                            fontSize = 13.sp
+                        )
+                }
+            }
+        }
+        Box(modifier = Modifier.background(Color.Cyan).height(90.dp).fillMaxWidth()) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+            ) {
+                Row(modifier = Modifier) {
+                    Column(
+                        modifier = Modifier
+                    ) {
+                        Text(
+                            text = "Ejemplo3",
+                            color = Color.Blue,
+                            fontSize = 17.sp,
+                            fontFamily = FontFamily.Monospace
+                        )
+                    }
+                }
+            }
+        }
+        Box(modifier = Modifier.background(Color.White).fillMaxSize()){
+            Box( modifier = Modifier.background(Color.Magenta)
+                .align(Alignment.BottomCenter)
+                .height(90.dp)
+                .width(120.dp)){
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.Center)
                 ) {
-                    Text(
-                        text = "Ejemplo1",
-                        color = Color.Black
-                    )
+                    Row(modifier = Modifier) {
+                        Column(
+                            modifier = Modifier
+                        ) {
+                            Text(
+                                text = "Ejemplo4",
+                                color = Color.White,
+                                fontSize = 14.sp
+                            )
+                        }
+                    }
                 }
-                }
+            }
         }
     }
-
 }
 
 /*@Preview(showBackground = true)
