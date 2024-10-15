@@ -9,7 +9,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -156,6 +159,27 @@ fun MiBox3(){
     }
 }
 
+@Composable
+fun MyColumn1(){
+    Box(modifier = Modifier.background(Color.White).fillMaxSize()){
+        Box(modifier = Modifier.background(Color.Gray).height(90.dp).fillMaxWidth()){
+            Row(modifier = Modifier.padding(30.dp)) {
+                Column(
+                    modifier = Modifier.padding(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    Text(
+                        text = "Ejemplo1",
+                        color = Color.Black
+                    )
+                }
+                }
+        }
+    }
+
+}
+
 /*@Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
@@ -166,25 +190,31 @@ fun GreetingPreview() {
 
  */
 
-/*
+
 @Preview(showBackground = true)
 @Composable
 fun MiBoxPreview(){
     MiBox()
 }
 
- */
 
-/*
+
+
 @Preview(showBackground = true)
 @Composable
 fun MiBox2Preview(){
     MiBox2()
 }
- */
+
 
 @Preview(showBackground = true)
 @Composable
 fun MiBox3Preview(){
     MiBox3()
+}
+
+@Preview(showBackground = true)
+@Composable
+fun MyColumn1Preview(){
+    MyColumn1()
 }
